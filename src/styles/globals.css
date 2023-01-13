@@ -2,3 +2,7 @@
 #greener{
   color: rgb(0, 240, 0);
 }
+.textanimate1{
+  opacity: 1;
+    transition: all ease-in 1s;
+}

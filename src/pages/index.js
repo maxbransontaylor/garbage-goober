@@ -1,13 +1,23 @@
 import Head from "next/head";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import { Container, Typography, Box, Paper } from "@mui/material";
 import RecycleImage from "../../public/bins.jpg";
-
+import { motion } from "framer-motion";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const heroTextStyles = {
+    m: 2,
+    p: 1,
+    position: "absolute",
+    color: "secondary.contrastText",
+    backgroundColor: "rgba(128, 128, 128, 0.781)",
+    borderRadius: 3,
+  };
+
   return (
     <>
       <Head>
@@ -29,35 +39,32 @@ export default function Home() {
               position: "relative",
             }}
           >
-            <Typography
-              variant="h4"
-              sx={{
-                m: 2,
-                p: 1,
-                position: "absolute",
-                color: "secondary.contrastText",
-                backgroundColor: "rgba(128, 128, 128, 0.781)",
-                borderRadius: 3,
-              }}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1 }}
             >
-              From aerosols to yoga mats...
-            </Typography>
-            <Typography
-              variant="h4"
-              sx={{
-                m: 2,
-                p: 1,
-                position: "absolute",
-                bottom: 0,
-                right: 0,
-                color: "secondary.contrastText",
-                backgroundColor: "rgba(128, 128, 128, 0.781)",
-                borderRadius: 3,
-              }}
+              <Typography variant="h4" sx={heroTextStyles}>
+                From aerosols to yoga mats...
+              </Typography>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 2 }}
             >
-              Let us be your opprotunity for a <span id="greener">greener</span>{" "}
-              future, today
-            </Typography>
+              <Typography
+                variant="h4"
+                sx={{
+                  ...heroTextStyles,
+                  bottom: 0,
+                  right: 0,
+                }}
+              >
+                Let us be your opprotunity for a{" "}
+                <span id="greener">greener</span> future, today
+              </Typography>
+            </motion.div>
           </Box>
           as you can see its lit fontFamily
         </Paper>
