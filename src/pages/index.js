@@ -2,7 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
-import { Switch, Typography } from "@mui/material";
+import { Container, Typography, Box, Paper } from "@mui/material";
+import RecycleImage from "../../public/bins.jpg";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,6 +16,52 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Container>
+        <Paper sx={{ mt: 2 }}>
+          <Box
+            id="hero"
+            sx={{
+              width: "inherit",
+              height: "50vh",
+              backgroundImage: `url(${RecycleImage.src})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              position: "relative",
+            }}
+          >
+            <Typography
+              variant="h4"
+              sx={{
+                m: 2,
+                p: 1,
+                position: "absolute",
+                color: "secondary.contrastText",
+                backgroundColor: "rgba(128, 128, 128, 0.781)",
+                borderRadius: 3,
+              }}
+            >
+              From aerosols to yoga mats...
+            </Typography>
+            <Typography
+              variant="h4"
+              sx={{
+                m: 2,
+                p: 1,
+                position: "absolute",
+                bottom: 0,
+                right: 0,
+                color: "secondary.contrastText",
+                backgroundColor: "rgba(128, 128, 128, 0.781)",
+                borderRadius: 3,
+              }}
+            >
+              Let us be your opprotunity for a <span id="greener">greener</span>{" "}
+              future, today
+            </Typography>
+          </Box>
+          as you can see its lit fontFamily
+        </Paper>
+      </Container>
     </>
   );
 }

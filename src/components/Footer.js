@@ -23,18 +23,18 @@ export default function Footer() {
           }}
         >
           <Typography>Questions? Get in touch:</Typography>
-          <Box sx={{ display: "flex", alignItems: "center" }}>
-            <CallIcon color="secondary" />
-            <Link underline="hover" href="tel:9199719765">
+          <Link underline="none" href="tel:9199719765">
+            <Box sx={{ display: "flex", alignItems: "center" }}>
+              <CallIcon color="secondary" />
               &nbsp; (919) 971-9765
-            </Link>
-          </Box>
-          <Box sx={{ display: "flex", alignItems: "center" }}>
-            <EmailIcon color="secondary" />
-            <Link underline="hover" href="mailto:GarbageGooberToday@gmail.com">
+            </Box>
+          </Link>
+          <Link underline="none" href="mailto:GarbageGooberToday@gmail.com">
+            <Box sx={{ display: "flex", alignItems: "center" }}>
+              <EmailIcon color="secondary" />
               &nbsp; GarbageGooberToday@gmail.com
-            </Link>
-          </Box>
+            </Box>
+          </Link>
         </Box>
         <Typography variant="h7" color="secondary.dark">
           &copy; {year} Garbage Goober{" "}

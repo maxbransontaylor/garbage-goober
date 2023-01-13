@@ -19,7 +19,7 @@ export const theme = responsiveFontSizes(
       h1: {
         fontFamily: "Fredoka One",
       },
-      h5: {
+      h4: {
         fontFamily: "Raleway",
         fontStyle: "italic",
       },
